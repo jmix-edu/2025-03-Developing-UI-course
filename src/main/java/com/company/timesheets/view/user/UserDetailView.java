@@ -70,4 +70,6 @@ public class UserDetailView extends StandardDetailView<User> {
             getEditedEntity().setPassword(passwordEncoder.encode(passwordField.getValue()));
         }
     }
+
+
 }
