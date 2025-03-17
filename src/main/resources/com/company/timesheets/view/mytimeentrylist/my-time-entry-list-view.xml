@@ -22,6 +22,7 @@
             <button id="createBtn" action="timeEntriesDataGrid.create"/>
             <button id="editBtn" action="timeEntriesDataGrid.edit"/>
             <button id="removeBtn" action="timeEntriesDataGrid.remove"/>
+            <button id="copyButton" action="timeEntriesDataGrid.copy"/>
             <simplePagination id="pagination" dataLoader="timeEntriesDl"/>
         </hbox>
         <dataGrid id="timeEntriesDataGrid"
@@ -33,6 +34,7 @@
                 <action id="create" type="list_create"/>
                 <action id="edit" type="list_edit"/>
                 <action id="remove" type="list_remove"/>
+                <action id="copy" text="msg://action.Copy" icon="COPY_O" type="list_itemTracking"/>
             </actions>
             <columns resizable="true">
                 <column property="date" autoWidth="true" flexGrow="0"/>
