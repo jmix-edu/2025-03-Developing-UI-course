@@ -8,6 +8,9 @@
         <item view="ts_Task.my" id="ts_Task.my"
               description="msg://com.company.timesheets/menu_config.ts_Task.my.description"
               title="msg://com.company.timesheets/menu_config.ts_Task.my.title"/>
+        <item view="ts_AsyncTasksView" title="msg://com.company.timesheets.view.asynctasks/asyncTasksView.title"/>
+        <item view="ts_TaskType.simple_list"
+              title="msg://com.company.timesheets.view.tasktype/taskTypeSimpleListView.title"/>
     </menu>
     <menu opened="true" id="projects" description="msg://com.company.timesheets/menu_config.projects.description"
           title="msg://com.company.timesheets/menu_config.projects.title">
@@ -23,16 +26,6 @@
     </menu>
     <menu opened="true" id="administration" description="msg:///menu_config.administration.description"
           title="msg://com.company.timesheets/menu.application.title">
-        <menu id="datatools" title="msg://com.company.timesheets/menu.datatools.title">
-            <item view="datatl_entityInspectorListView"
-                  title="msg://io.jmix.datatoolsflowui.view.entityinspector/listTitle"/>
-        </menu>
-        <menu id="security" title="msg://com.company.timesheets/menu.security.title">
-            <item view="sec_ResourceRoleModel.list"
-                  title="msg://io.jmix.securityflowui.view.resourcerole/resourceRoleModelListView.menu"/>
-            <item view="sec_RowLevelRoleModel.list"
-                  title="msg://io.jmix.securityflowui.view.rowlevelrole/rowLevelRoleModelListView.menu"/>
-        </menu>
         <item view="ts_User.list" title="msg://com.company.timesheets.view.user/UserListView.title"/>
     </menu>
 </menu-config>

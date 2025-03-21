@@ -13,6 +13,11 @@
     </data>
     <facets>
         <dataLoadCoordinator auto="true"/>
+        <urlQueryParameters>
+            <pagination component="pagination"/>
+            <genericFilter component="genericFilter"/>
+        </urlQueryParameters>
+        <settings auto="true"/>
     </facets>
     <layout>
         <genericFilter id="genericFilter" dataLoader="timeEntriesDl">

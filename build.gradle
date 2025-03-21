@@ -43,6 +43,11 @@ dependencies {
     }
     testImplementation 'io.jmix.flowui:jmix-flowui-test-assist'
     implementation 'org.postgresql:postgresql'
+    implementation 'io.jmix.email:jmix-email-starter'
+    implementation 'io.jmix.email:jmix-email-flowui-starter'
+    implementation 'io.jmix.jmxconsole:jmix-jmxconsole-starter'
+    implementation 'io.jmix.pessimisticlock:jmix-pessimisticlock-flowui-starter'
+    implementation 'io.jmix.pessimisticlock:jmix-pessimisticlock-starter'
 }
 
 configurations.implementation {
