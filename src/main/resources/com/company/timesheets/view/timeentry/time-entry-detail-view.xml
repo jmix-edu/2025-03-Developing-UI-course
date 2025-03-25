@@ -30,7 +30,8 @@
         <action id="saveAction" type="detail_saveClose"/>
         <action id="closeAction" type="detail_close"/>
     </actions>
-    <layout>
+    <layout padding="false" spacing="false" alignItems="STRETCH" expand="contentBox">
+        <vbox id="contentBox" classNames="overflow-auto">
         <formLayout id="form"
                     dataContainer="timeEntryDc">
             <datePicker id="dateField" property="date">
@@ -78,7 +79,8 @@
                 </prefix>
             </textArea>
         </formLayout>
-        <hbox id="detailActions">
+        </vbox>
+        <hbox id="detailActions" classNames="px-m py-xs bg-contrast-5">
             <button id="saveAndCloseBtn" action="saveAction"/>
             <button id="closeBtn" action="closeAction"/>
         </hbox>

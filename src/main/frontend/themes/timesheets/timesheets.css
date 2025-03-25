@@ -68,3 +68,7 @@ vaadin-grid::part(open-project) {
 vaadin-grid::part(closed-project) {
     background: var(--lumo-error-text-color);
 }
+
+.footer-panel {
+    background-color: var(--lumo-contrast-5pct)
+}
