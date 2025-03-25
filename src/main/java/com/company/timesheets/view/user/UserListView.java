@@ -5,6 +5,7 @@ import com.company.timesheets.view.main.MainView;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.router.Route;
 import io.jmix.core.AccessManager;
+import io.jmix.core.Messages;
 import io.jmix.email.EmailInfoBuilder;
 import io.jmix.email.Emailer;
 import io.jmix.flowui.Dialogs;
@@ -49,6 +50,8 @@ public class UserListView extends StandardListView<User> {
     private Emailer emailer;
     @Autowired
     private BackgroundWorker backgroundWorker;
+    @Autowired
+    private Messages messages;
 
     @Subscribe("usersDataGrid.sendEmail")
     public void onUsersDataGridSendEmail(final ActionPerformedEvent event) {
@@ -57,7 +60,7 @@ public class UserListView extends StandardListView<User> {
                 .withLabelsPosition(Dialogs.InputDialogBuilder.LabelsPosition.TOP)
                 .withParameters(
                         InputParameter.stringParameter("title")
-                                .withLabel("Title")
+                                .withLabel(messages.getMessage("myTitleHolder"))
                                 .withRequired(true),
                         InputParameter.parameter("body")
                                 .withLabel("Body")

@@ -31,12 +31,25 @@
     <layout>
         <formLayout id="form"
                     dataContainer="projectParticipantDc">
-            <entityPicker id="userField" property="user">
+            <entityComboBox id="userField"
+                            property="user">
                 <actions>
                     <action id="entityLookup" type="entity_lookup"/>
                     <action id="entityClear" type="entity_clear"/>
                 </actions>
-            </entityPicker>
+                <itemsQuery class="com.company.timesheets.entity.User"
+                            searchStringFormat="(?i)%${inputString}%"
+                            escapeValueForLike="true">
+                    <fetchPlan extends="_base"/>
+                    <query>
+                        select u from ts_User u
+                            where u.username like :searchString
+                            or u.firstName like :searchString
+                            or u.lastName like :searchString
+                            escape '\' order by u.username asc
+                    </query>
+                </itemsQuery>
+            </entityComboBox>
             <entityPicker id="projectField" property="project">
                 <actions>
                     <action id="entityLookup" type="entity_lookup"/>

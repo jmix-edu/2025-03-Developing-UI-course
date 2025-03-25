@@ -32,7 +32,7 @@
             <properties include=".*"/>
         </genericFilter>
         <hbox id="buttonsPanel" classNames="buttons-panel">
-            <button id="createBtn" action="projectsDataGrid.create"/>
+            <button id="createBtn" action="projectsDataGrid.create" classNames="my-button"/>
             <button id="editBtn" action="projectsDataGrid.edit"/>
             <button id="removeBtn" action="projectsDataGrid.remove"/>
             <simplePagination id="pagination" dataLoader="projectsDl"/>
