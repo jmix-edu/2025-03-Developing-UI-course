@@ -21,9 +21,15 @@ repositories {
     maven {
         url 'https://global.repo.jmix.io/repository/public'
     }
+    maven {
+        url 'https://maven.vaadin.com/vaadin-addons'
+    }
 }
 
 dependencies {
+//    https://vaadin.com/directory/
+    implementation 'org.vaadin.addons.componentfactory:vcf-pdf-viewer:2.8.1'
+
     implementation 'com.company:my-theme:1.0-SNAPSHOT'
 
     implementation 'io.jmix.core:jmix-core-starter'

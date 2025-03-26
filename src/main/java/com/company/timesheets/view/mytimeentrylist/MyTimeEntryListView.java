@@ -28,24 +28,24 @@ public class MyTimeEntryListView extends StandardView {
     private TimeEntrySupport timeEntrySupport;
     @Autowired
     private DialogWindows dialogWindows;
-
-    @Subscribe("timeEntriesDataGrid.copy")
-    public void onTimeEntriesDataGridCopy(final ActionPerformedEvent event) {
-        TimeEntry selectedEntry = timeEntriesDataGrid.getSingleSelectedItem();
-        if (selectedEntry == null) {
-            return;
-        }
-
-        TimeEntry copiedEntry = timeEntrySupport.copy(selectedEntry);
-
-        DialogWindow<TimeEntryDetailView> dialogWindow = dialogWindows.detail(timeEntriesDataGrid)
-                .withViewClass(TimeEntryDetailView.class)
-                .newEntity(copiedEntry)
-                .build();
-
-        dialogWindow.getView().setOwnTimeEntry(true);
-        dialogWindow.open();
-    }
+//    Replaced with created TimeEntryCopyAction in a declarative way
+//    @Subscribe("timeEntriesDataGrid.copy")
+//    public void onTimeEntriesDataGridCopy(final ActionPerformedEvent event) {
+//        TimeEntry selectedEntry = timeEntriesDataGrid.getSingleSelectedItem();
+//        if (selectedEntry == null) {
+//            return;
+//        }
+//
+//        TimeEntry copiedEntry = timeEntrySupport.copy(selectedEntry);
+//
+//        DialogWindow<TimeEntryDetailView> dialogWindow = dialogWindows.detail(timeEntriesDataGrid)
+//                .withViewClass(TimeEntryDetailView.class)
+//                .newEntity(copiedEntry)
+//                .build();
+//
+//        dialogWindow.getView().setOwnTimeEntry(true);
+//        dialogWindow.open();
+//    }
 
     @Install(to = "timeEntriesDataGrid.create", subject = "queryParametersProvider")
     private QueryParameters timeEntriesDataGridCreateQueryParametersProvider() {
